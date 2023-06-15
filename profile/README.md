@@ -40,8 +40,8 @@ For activate reactions we should change any of signals.
 a.set(2);
 ```
 
-Necessary to implement these three primary elements. And two additional `untrack`, and `batch`, but late.
+Necessary to implement these three primary elements. And two additional `untrack`, and `batch`.
 
-Play with demo implementation on Codesandbox https://codesandbox.io/s/unruffled-cerf-ddtt6s?file=/src/signals.js
+Play with demo implementation on Codesandbox https://codesandbox.io/s/unruffled-cerf-ddtt6s?file=/src/signals.js ⭐
 
 Enjoy your signals!
