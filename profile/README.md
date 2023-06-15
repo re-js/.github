@@ -34,13 +34,13 @@ The third element is computed.
 const sum = computed(() => a() + b())
 ```
 
-For activate reactions we should change any of signals, or both
+For activate reactions we should change any of signals.
 
 ```javascript
 a.set(2);
 ```
 
-Necessary to implement these three primary elements. And two additional "untracked", and "batch", but late.
+Necessary to implement these three primary elements. And two additional `untracked`, and `batch`, but late.
 
 Play with demo implementation on Codesandbox https://codesandbox.io/s/unruffled-cerf-ddtt6s?file=/src/signals.js
 
