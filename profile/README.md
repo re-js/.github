@@ -2,8 +2,8 @@
 
 We can see the different versions of implementations of one algorithm.
 
-- @preactjs/signals-react
-- @angular/signals
+- [@preactjs/signals-react](https://github.com/preactjs/signals#guide--api)
+- [@angular/signals](https://angular.io/guide/signals)
 - MobX, Vue, SolidJS 
 
 And each time it's a different implementation. If you see to source code of each one, everywhere implementation will be different.
@@ -40,7 +40,7 @@ For activate reactions we should change any of signals.
 a.set(2);
 ```
 
-Necessary to implement these three primary elements. And two additional `untracked`, and `batch`, but late.
+Necessary to implement these three primary elements. And two additional `untrack`, and `batch`, but late.
 
 Play with demo implementation on Codesandbox https://codesandbox.io/s/unruffled-cerf-ddtt6s?file=/src/signals.js
 
