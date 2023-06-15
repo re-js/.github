@@ -44,4 +44,4 @@ Necessary to implement these three primary elements. And two additional `untrack
 
 Play with demo implementation on Codesandbox https://codesandbox.io/s/unruffled-cerf-ddtt6s?file=/src/signals.js
 
-Enjoy your state!
+Enjoy your signals!
