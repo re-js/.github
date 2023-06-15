@@ -1,43 +1,47 @@
+## The ecosystem around Signals.
 
-# The ecosystem around Signal abstraction.
+We can see the different versions of implementations of one algorithm.
 
-We can see the different versions of implementations of one algoritm.
 - @preactjs/signals-react
 - @angular/signals
-- MobX, Vue, SolidJS
-And each time it's different implementation. If you see to source code of each one, everythere implementation will be different.
+- MobX, Vue, SolidJS 
 
+And each time it's a different implementation. If you see to source code of each one, everywhere implementation will be different.
 Programmer friends, I urge you. Let's write the minimum and most productive code for this algorithm and offer to integrate it into all these libraries. This is how we can maximize the growth of reactive library syntax improvement, as well as the performance increase for all of these frameworks.
 
-Minimal algoritm implementation currenty located in the [re-js/reactive-box](https://github.com/re-js/reactive-box). Repository also contains the tests for algoritm checking.
+Minimal algorithm implementation is currently located in the re-js/reactive-box. The repository also contains the tests for algorithm checking.
 
-I will ask attention especially from masters of olympiados, and amazing kind guys who have keen, hudge, and clever interest in the complex algorithmic task!
+I will ask for attention, especially from masters of olympiads, and amazing kind guys who have a keen, huge, and clever interest in the complex algorithmic task!
 
 ## Signal abstraction
 
-**Signal** - It's a _container_ with value. Each time when value changed, container notify subscribers. It's a basic reactive element can be used for store any values that can be compared by equlity via comparer function. Using the different comparer function you can get "shallow" or "deep" equality.
+Signal - It's a container with value. Each time when value changes, the container notifies subscribers. It's a basic reactive element that can be used to store any values that can be compared by equality via the comparer function. Using the different comparer functions you can get "shallow" or "deep" equality.
 
 ```javascript
-const [get, set] = signal(0)
+const a = signal(0)
+const b = signal(1)
 ```
 
-The second element is the reaction. The primary reason of popularity Signal abstraction is the convinient syntax for collect reactive dependencies. It happens transparently.
+The second element is the reaction. The primary reason of popularity Signal abstraction is the convenient syntax for collecting reactive dependencies. It happens transparently.
 
 ```javascript
-effect(
-  () => console.log(get())
-)
+effect(() => console.log(a()))
 ```
 
-The third element is the computed.
+The third element is computed.
 
 ```javascript
-const [getC] = computed(() => get() + 5)
+const sum = computed(() => a() + b())
 ```
 
-Necessary to implement these tree primary element. And two additional "untracked", and "batch", but late.
+For activate reactions we should change any of signals, or both
 
-[Play with minimal implementation on Codesandbox](https://codesandbox.io/s/unruffled-cerf-ddtt6s?file=/src/signals.js) https://codesandbox.io/s/unruffled-cerf-ddtt6s?file=/src/signals.js
+```javascript
+a.set(2);
+```
 
-Enjoy you state!
+Necessary to implement these three primary elements. And two additional "untracked", and "batch", but late.
 
+Play with minimal implementation on Codesandbox https://codesandbox.io/s/unruffled-cerf-ddtt6s?file=/src/signals.js
+
+Enjoy your state!
